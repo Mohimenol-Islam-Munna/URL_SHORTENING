@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="t">
-      <h2>URL SHOTENING APP</h2>
+      <h2>URL SHOTENING</h2>
     </div>
   );
 }
