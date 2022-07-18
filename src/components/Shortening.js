@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const Shortening = () => {
   const [inputLink, setInputLink] = useState("");
@@ -95,8 +96,13 @@ const Shortening = () => {
       <div className="mt-5">
         {multipleShortLink.length > 0
           ? multipleShortLink.map((link, index) => (
-              <div key={index} className="bg-gray-300 p-8 mt-2">
-                <p>{link.short_link}</p>
+              <div key={index} className="bg-gray-300 p-8 mt-2 flex ">
+                <p className="flex-grow">{link.short_link}</p>
+                <CopyToClipboard text={link.short_link}>
+                  <button className="text-red-500 border-2 p-2">
+                    click to copy
+                  </button>
+                </CopyToClipboard>
               </div>
             ))
           : ""}
