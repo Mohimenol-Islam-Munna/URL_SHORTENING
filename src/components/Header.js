@@ -1,43 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 
 const Header = () => {
+  const [menuToggle, setMenuToggle] = useState(false);
+
+  console.log("menuToggle ::", menuToggle);
+
+  const meuToggleHandler = () => {
+    setMenuToggle(!menuToggle);
+    console.log("meuToggleHandler");
+  };
+
   return (
-    <div className="overflow-hidden bg-indigo-400 flex justify-between sm:justify-center items-center gap-10 py-5 relative">
+    <div className=" bg-indigo-400 flex flex-col sm:flex-row sm:gap-10 sm:py-5 relative">
       {/* logo  */}
-      <button className="border border-red-500 basis-40 text-left ml-5">
+      <button className="text-3xl basis-auto sm:basis-40 text-left sm:ml-5 p-3">
         Shortly
       </button>
 
       {/* mobile menu button  */}
-      <div className="sm:hidden border border-indigo-600 p-3 mr-2">
-        <IoIosMenu />
+      <div
+        onClick={meuToggleHandler}
+        className={`absolute ${
+          !menuToggle ? "top-2 hover:text-white" : "top-0 hover:text-red-600"
+        } right-2 sm:hidden p-2 text-3xl hover:cursor-pointer`}
+      >
+        {!menuToggle ? <IoIosMenu /> : <span>x</span>}
       </div>
 
       {/* main menu  */}
       <div
-        className="w-[100%] bg-yellow-500 flex-grow flex 
-       flex-col sm:flex-row justify-between items-center absolute top-[100%] left-0
-        sm:static"
+        id="main_menu"
+        className={`w-[100%] bg-gray-600 p-5 flex-grow ${
+          !menuToggle ? "hidden" : "flex"
+        } sm:flex flex-col sm:flex-row justify-between items-center`}
       >
-        <div className="border-b border-b-indigo-600  flex flex-col sm:flex-row sm:border-b-0 gap-3">
+        <div className="w-full border-b border-b-indigo-600  flex flex-col items-center sm:flex-row sm:border-b-0 gap-3">
           <div>
-            <a href="">Feaqtures</a>
+            <a href="#">Features</a>
           </div>
           <div>
-            <a href="">Pricing</a>
+            <a href="#">Pricing</a>
           </div>
           <div>
-            <a href="">Resources</a>
+            <a href="#">Resources</a>
           </div>
         </div>
 
-        <div className=" flex gap-3 flex-col sm:flex-row">
+        <div className="w-full flex gap-3 flex-col items-center sm:flex-row">
           <div>
-            <a href="">Login</a>
+            <a href="#">Login</a>
           </div>
           <div>
-            <a href="">Sign Up</a>
+            <a href="#">Sign Up</a>
           </div>
         </div>
       </div>
