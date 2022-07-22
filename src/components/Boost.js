@@ -2,7 +2,7 @@ import React from 'react'
 
 const Boost=()=> {
   return (
-    <div>Boost</div>
+    <div className='bg-blue-300'>Boost</div>
   )
 }
 

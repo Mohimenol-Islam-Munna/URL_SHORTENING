@@ -12,9 +12,9 @@ const Header = () => {
   };
 
   return (
-    <div className=" bg-indigo-400 flex flex-col sm:flex-row sm:gap-10 sm:py-5 relative">
+    <div className="w-[85%] mx-auto flex flex-col sm:flex-row sm:gap-10 sm:py-1 relative">
       {/* logo  */}
-      <button className="text-3xl basis-auto sm:basis-40 text-left sm:ml-5 p-3">
+      <button className="text-3xl basis-auto sm:basis-40 text-left sm:ml-0 p-3 pl-0">
         Shortly
       </button>
 
@@ -31,11 +31,11 @@ const Header = () => {
       {/* main menu  */}
       <div
         id="main_menu"
-        className={`w-[100%] bg-gray-600 p-5 flex-grow ${
+        className={`w-[100%] p-5 flex-grow ${
           !menuToggle ? "hidden" : "flex"
-        } sm:flex flex-col sm:flex-row justify-between items-center`}
+        } flex-col sm:flex sm:flex-row justify-between items-center `}
       >
-        <div className="w-full border-b border-b-indigo-600  flex flex-col items-center sm:flex-row sm:border-b-0 gap-3">
+        <div className="w-full flex flex-col items-center sm:flex-row gap-3 ">
           <div>
             <a href="#">Features</a>
           </div>
@@ -47,7 +47,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="w-full flex gap-3 flex-col items-center sm:flex-row">
+        <div className="w-full flex gap-3 flex-col items-center sm:flex-row  sm:justify-end">
           <div>
             <a href="#">Login</a>
           </div>

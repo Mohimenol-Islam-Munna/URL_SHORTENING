@@ -70,36 +70,43 @@ const Shortening = () => {
 
   return (
     <>
-      <div className="bg-[#35323E] p-8">
-        <div className="rounded-md flex gap-3">
-          <input
-            className="p-3 border-3 border-red-600 rounded-lg flex-grow"
-            type="text"
-            name="link"
-            value={inputLink}
-            onChange={(event) => inputLinkHandler(event)}
-            placeholder="Enter Your Link"
-          />
-          <button
-            className="bg-[#2ACFCF] p-3 px-3 rounded-lg"
-            onClick={createShortenLinkHandler}
-          >
-            Shorten It
-          </button>
-        </div>
-        <div>
-          {inputError.status && (
-            <p className="text-red-400 mt-2">{inputError.message}</p>
-          )}
+      <div className="">
+        <div className="w-full bg-[#35323E] p-8 rounded-lg">
+          <div className="rounded-md flex flex-col sm:flex-row gap-3">
+            <div className="flex-grow">
+              <input
+                className="w-full p-3 border-3 border-red-600 rounded-lg"
+                type="text"
+                name="link"
+                value={inputLink}
+                onChange={(event) => inputLinkHandler(event)}
+                placeholder="Enter Your Link"
+              />
+              <div>
+                {inputError.status && (
+                  <p className="text-red-400 mt-2">{inputError.message}</p>
+                )}
+              </div>
+            </div>
+            <div>
+              <button
+                className="w-full bg-[#2ACFCF] p-3 px-3 rounded-lg"
+                onClick={createShortenLinkHandler}
+              >
+                Shorten It
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="mt-5">
+
+      <div className="">
         {multipleShortLink.length > 0
           ? multipleShortLink.map((link, index) => (
-              <div key={index} className="bg-gray-300 p-8 mt-2 flex ">
+              <div key={index} className="bg-gray-300 p-4 mt-2 flex rounded-lg items-center">
                 <p className="flex-grow">{link.short_link}</p>
                 <CopyToClipboard text={link.short_link}>
-                  <button className="text-red-500 border-2 p-2">
+                  <button className="text-red-500 border-2 py-2 px-3 rounded-lg">
                     click to copy
                   </button>
                 </CopyToClipboard>
