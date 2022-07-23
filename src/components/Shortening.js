@@ -68,10 +68,18 @@ const Shortening = () => {
     }
   }, [multipleShortLink]);
 
+  useEffect(() => {
+    let targetElement = document.getElementById("inputElement");
+
+    console.log("targetElement height: ", targetElement.clientHeight);
+  }, []);
+
   return (
     <>
-      <div className="">
-        <div className="w-full bg-[#35323E] p-8 rounded-lg">
+      <div id="inputElement" className="border border-transparent">
+        <div
+          className={`w-full bg-[#35323E] p-8 rounded-lg -mt-[85px] sm:-mt-[56px]`}
+        >
           <div className="rounded-md flex flex-col sm:flex-row gap-3">
             <div className="flex-grow">
               <input
@@ -100,10 +108,13 @@ const Shortening = () => {
         </div>
       </div>
 
-      <div className="">
+      <div>
         {multipleShortLink.length > 0
           ? multipleShortLink.map((link, index) => (
-              <div key={index} className="bg-gray-300 p-4 mt-2 flex rounded-lg items-center">
+              <div
+                key={index}
+                className="bg-gray-300 p-4 mt-2 flex rounded-lg items-center"
+              >
                 <p className="flex-grow">{link.short_link}</p>
                 <CopyToClipboard text={link.short_link}>
                   <button className="text-red-500 border-2 py-2 px-3 rounded-lg">
