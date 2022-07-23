@@ -17,7 +17,7 @@ function App() {
         <Hero />
       </div>
       <div className="bg-gray-500">
-        <div className="w-[85%] mx-auto">
+        <div className="w-[85%] mx-auto py-1">
           <Shortening />
           <AdvanceStates />
         </div>
