@@ -15,7 +15,6 @@
   position: absolute;
   top: calc(50% - 10px);
   left: 100%;
-  width: 81px;
   height: 10px;
   z-index: -1;
   background-color: cyan;

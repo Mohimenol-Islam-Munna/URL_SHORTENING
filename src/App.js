@@ -12,12 +12,12 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <div className="mx-auto bg-white">
+      <div className="bg-white">
         <Header />
         <Hero />
       </div>
       <div className="bg-gray-500">
-        <div className="w-[85%] mx-auto py-1">
+        <div className="w-full border p-2 sm:px-0  sm:w-[85%] mx-auto">
           <Shortening />
           <AdvanceStates />
         </div>
