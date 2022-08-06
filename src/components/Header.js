@@ -37,22 +37,29 @@ const Header = () => {
       >
         <div className="w-full flex flex-col items-center sm:flex-row gap-3 border-b-[1px] sm:border-b-0">
           <div>
-            <a href="menu">Features</a>
+            {/* invalid url in href through error in netlify so link replace with button  */}
+
+            {/* <a href="#menu">Features</a> */}
+            <button>Features t</button>
           </div>
           <div>
-            <a href="menu">Pricing</a>
+            {/* <a href="#menu">Pricing</a> */}
+            <button>Pricing</button>
           </div>
           <div>
-            <a href="menu">Resources</a>
+            {/* <a href="#menu">Resources</a> */}
+            <button>Resources</button>
           </div>
         </div>
 
         <div className="w-full flex gap-3 flex-col items-center sm:flex-row sm:justify-end">
           <div>
-            <a href="menu">Login</a>
+            {/* <a href="#menu">Login</a> */}
+            <button>Login</button>
           </div>
-          <div  className="bg-[#2ACFCF] px-10 py-2 rounded-full text-white">
-            <a href="menu">Sign Up</a>
+          <div className="bg-[#2ACFCF] px-10 py-2 rounded-full text-white">
+            {/* <a href="#menu">Sign Up</a> */}
+            <button>Sign Up</button>
           </div>
         </div>
       </div>
