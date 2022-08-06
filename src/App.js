@@ -16,8 +16,8 @@ function App() {
         <Header />
         <Hero />
       </div>
-      <div className="bg-gray-500">
-        <div className="w-full border p-2 sm:px-0  sm:w-[85%] mx-auto">
+      <div className="bg-gray-300 ">
+        <div className="w-full p-2 sm:px-0  sm:w-[85%] mx-auto">
           <Shortening />
           <AdvanceStates />
         </div>

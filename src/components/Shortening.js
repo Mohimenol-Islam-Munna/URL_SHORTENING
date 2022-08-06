@@ -6,6 +6,7 @@ const Shortening = () => {
   const [inputLink, setInputLink] = useState("");
   const [inputError, setInputError] = useState({ status: false, message: "" });
   const [multipleShortLink, setMultipleShortLink] = useState([]);
+  const [checkCopy, setCheckCopy] = useState([{ id: 0, copied: false }]);
 
   const inputLinkHandler = (event) => {
     setInputLink(event.target.value);
@@ -31,6 +32,7 @@ const Shortening = () => {
         });
 
         setMultipleShortLink([...multipleShortLink, res?.data?.result]);
+
         setInputLink("");
         setInputError({
           ...inputError,
@@ -70,8 +72,6 @@ const Shortening = () => {
 
   useEffect(() => {
     let targetElement = document.getElementById("inputElement");
-
-    console.log("targetElement height: ", targetElement.clientHeight);
   }, []);
 
   return (
@@ -98,7 +98,7 @@ const Shortening = () => {
             </div>
             <div>
               <button
-                className="w-full bg-[#2ACFCF] p-3 px-3 rounded-lg"
+                className="w-full bg-[#2ACFCF] p-3 px-3 rounded-lg text-white"
                 onClick={createShortenLinkHandler}
               >
                 Shorten It
@@ -113,12 +113,26 @@ const Shortening = () => {
           ? multipleShortLink.map((link, index) => (
               <div
                 key={index}
-                className="bg-gray-300 p-4 mt-2 flex rounded-lg items-center"
+                className="bg-white p-4 mt-2 flex flex-col sm:flex-row rounded-lg items-center box-border"
               >
-                <p className="flex-grow">{link.short_link}</p>
-                <CopyToClipboard text={link.short_link}>
-                  <button className="text-red-500 border-2 py-2 px-3 rounded-lg">
-                    click to copy
+                <p className="flex-grow"> {link?.original_link}</p>
+
+                <p className="text-[#2ACFCF] mr-5 ">{link?.short_link}</p>
+
+                <CopyToClipboard
+                  text={link.short_link}
+                  onCopy={() => setCheckCopy({ id: index, copied: true })}
+                >
+                  <button
+                    className={`text-white  py-1 px-3 rounded-lg ${
+                      checkCopy.id === index && checkCopy.copied
+                        ? "bg-[#35323E]"
+                        : "bg-[#2ACFCF]"
+                    }`}
+                  >
+                    {checkCopy.id === index && checkCopy.copied
+                      ? "copied"
+                      : "copy"}
                   </button>
                 </CopyToClipboard>
               </div>

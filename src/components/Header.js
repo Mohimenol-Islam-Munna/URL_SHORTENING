@@ -4,8 +4,6 @@ import { IoIosMenu } from "react-icons/io";
 const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
 
-  console.log("menuToggle ::", menuToggle);
-
   const meuToggleHandler = () => {
     setMenuToggle(!menuToggle);
     console.log("meuToggleHandler");

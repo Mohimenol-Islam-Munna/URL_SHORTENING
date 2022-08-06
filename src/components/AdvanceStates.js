@@ -17,12 +17,15 @@ const AdvanceStates = () => {
           {/* div 1  */}
           <div className="p-5 bg-white basis-4/12 connector rounded-md before:!hidden md:before:!flex md:before:!w-[20px] lg:before:!w-[40px]">
             <div>
-              <div className="w-[60px] h-[60px] flex justify-center items-center bg-yellow-600 rounded-full -mt-14">
-                {" "}
-                img{" "}
+              <div className="w-[60px] h-[60px] flex justify-center items-center bg-[#35323E]  rounded-full -mt-14">
+                <img
+                  src="/images/icon-brand-recognition.svg"
+                  style={{ width: "50%", height: "50%" }}
+                  alt="band-recognition"
+                />
               </div>
             </div>
-            <h2 className="text-2xl mt-3">Heading one</h2>
+            <h2 className="text-2xl mt-3">Brand Recognition</h2>
             <p className="text-md mt-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
               quam maiores totam delectus ratione voluptatem, ea, provident
@@ -33,12 +36,15 @@ const AdvanceStates = () => {
 
           <div className="p-5 bg-white basis-4/12 connector rounded-md relative top-10 before:!hidden md:before:!flex md:before:!w-[20px] lg:before:!w-[40px]">
             <div>
-              <div className="w-[60px] h-[60px] flex justify-center items-center bg-yellow-600 rounded-full -mt-14">
-                {" "}
-                img{" "}
+              <div className="w-[60px] h-[60px] flex justify-center items-center bg-[#35323E]  rounded-full -mt-14">
+                <img
+                  src="/images/icon-detailed-records.svg"
+                  style={{ width: "50%", height: "50%" }}
+                  alt="band-recognition"
+                />
               </div>
             </div>
-            <h2 className="text-2xl mt-3">Heading Two</h2>
+            <h2 className="text-2xl mt-3">Detailed Records</h2>
             <p className="text-md mt-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
               quam maiores totam delectus ratione voluptatem, ea, provident
@@ -49,12 +55,15 @@ const AdvanceStates = () => {
 
           <div className="p-5 bg-white basis-4/12 rounded-md relative top-20">
             <div>
-              <div className="w-[60px] h-[60px] flex justify-center items-center bg-yellow-600 rounded-full -mt-14">
-                {" "}
-                img{" "}
+              <div className="w-[60px] h-[60px] flex justify-center items-center bg-[#35323E]  rounded-full -mt-14">
+                <img
+                  src="/images/icon-fully-customizable.svg"
+                  style={{ width: "50%", height: "50%" }}
+                  alt="band-recognition"
+                />
               </div>
             </div>
-            <h2 className="text-2xl mt-3">Heading Three</h2>
+            <h2 className="text-2xl mt-3">Fully Customizable</h2>
             <p className="text-md mt-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
               quam maiores totam delectus ratione voluptatem, ea, provident
