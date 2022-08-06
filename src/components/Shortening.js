@@ -59,6 +59,7 @@ const Shortening = () => {
         setMultipleShortLink([]);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -69,10 +70,6 @@ const Shortening = () => {
       );
     }
   }, [multipleShortLink]);
-
-  useEffect(() => {
-    let targetElement = document.getElementById("inputElement");
-  }, []);
 
   return (
     <>

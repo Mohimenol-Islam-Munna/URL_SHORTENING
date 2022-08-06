@@ -37,22 +37,22 @@ const Header = () => {
       >
         <div className="w-full flex flex-col items-center sm:flex-row gap-3 border-b-[1px] sm:border-b-0">
           <div>
-            <a href="#">Features</a>
+            <a href="menu">Features</a>
           </div>
           <div>
-            <a href="#">Pricing</a>
+            <a href="menu">Pricing</a>
           </div>
           <div>
-            <a href="#">Resources</a>
+            <a href="menu">Resources</a>
           </div>
         </div>
 
         <div className="w-full flex gap-3 flex-col items-center sm:flex-row sm:justify-end">
           <div>
-            <a href="#">Login</a>
+            <a href="menu">Login</a>
           </div>
           <div  className="bg-[#2ACFCF] px-10 py-2 rounded-full text-white">
-            <a href="#">Sign Up</a>
+            <a href="menu">Sign Up</a>
           </div>
         </div>
       </div>
